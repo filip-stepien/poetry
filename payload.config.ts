@@ -6,6 +6,11 @@ import { Poems } from '@/payload/collections/Poems';
 import { pl } from '@payloadcms/translations/languages/pl';
 import { en } from '@payloadcms/translations/languages/en';
 import { Media } from '@/payload/collections/Media';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default buildConfig({
     editor: lexicalEditor({
@@ -36,6 +41,9 @@ export default buildConfig({
                 }
             }
         }
+    },
+    typescript: {
+        outputFile: path.resolve(__dirname, 'src', 'payload', 'types.ts')
     },
     sharp
 });

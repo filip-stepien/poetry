@@ -2,18 +2,22 @@
     "name": "poetry",
     "version": "0.1.0",
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build --turbopack",
         "start": "next start",
         "lint": "eslint",
-        "pretty": "prettier --write ."
+        "pretty": "prettier --write .",
+        "payload:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+        "payload:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types"
     },
     "dependencies": {
         "@payloadcms/db-sqlite": "^3.55.1",
         "@payloadcms/next": "^3.55.1",
         "@payloadcms/richtext-lexical": "^3.55.1",
         "@payloadcms/translations": "^3.55.1",
+        "cross-env": "^10.0.0",
         "graphql": "^16.11.0",
         "next": "15.5.3",
         "payload": "^3.55.1",
