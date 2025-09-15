@@ -31,7 +31,7 @@ export default buildConfig({
     editor: slateEditor({
         admin: {
             elements: [
-                descriptionElement({ fallbackLanguage, en: 'Headers', pl: 'Nagłówki' }),
+                descriptionElement({ fallbackLanguage, en: 'Header', pl: 'Nagłówek' }),
                 'h1',
                 'h2',
                 'h3',
@@ -43,22 +43,21 @@ export default buildConfig({
                 descriptionElement({ fallbackLanguage, en: 'Formatting', pl: 'Formatowanie' }),
                 'indent',
                 'textAlign',
-                'blockquote',
                 separatorElement(),
 
-                descriptionElement({ fallbackLanguage, en: 'Lists', pl: 'Listy' }),
+                descriptionElement({ fallbackLanguage, en: 'List', pl: 'Lista' }),
                 'ol',
                 'ul',
                 'li',
                 separatorElement(),
 
-                descriptionElement({ fallbackLanguage, en: 'Links', pl: 'Łącza' }),
+                descriptionElement({ fallbackLanguage, en: 'Link', pl: 'Łącze' }),
                 'link',
                 'upload',
-                'relationship',
                 separatorElement(),
 
-                descriptionElement({ fallbackLanguage, en: 'Text style', pl: 'Styl tekstu' })
+                descriptionElement({ fallbackLanguage, en: 'Text style', pl: 'Styl tekstu' }),
+                'blockquote'
             ],
             leaves: ['bold', 'italic', 'underline', 'strikethrough']
         }

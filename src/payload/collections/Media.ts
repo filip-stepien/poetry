@@ -1,5 +1,19 @@
 import type { CollectionConfig } from 'payload';
 
+export const mimeTypes = [
+    'image/jpeg',
+    'image/png',
+    'image/gif',
+    'image/webp',
+    'image/svg+xml',
+    'video/mp4',
+    'video/webm',
+    'video/ogg',
+    'audio/mpeg',
+    'audio/ogg',
+    'audio/wav'
+];
+
 export const Media: CollectionConfig = {
     slug: 'media',
     labels: {
@@ -12,30 +26,12 @@ export const Media: CollectionConfig = {
             pl: 'Multimedia'
         }
     },
+    access: {
+        read: () => true
+    },
     upload: {
         staticDir: 'media',
-        imageSizes: [
-            {
-                name: 'thumbnail',
-                width: 400,
-                height: 300,
-                position: 'centre'
-            },
-            {
-                name: 'card',
-                width: 768,
-                height: 1024,
-                position: 'centre'
-            },
-            {
-                name: 'tablet',
-                width: 1024,
-                height: undefined,
-                position: 'centre'
-            }
-        ],
-        adminThumbnail: 'thumbnail',
-        mimeTypes: ['image/*', 'video/*', 'audio/*']
+        mimeTypes
     },
     fields: [
         {
