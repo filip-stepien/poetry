@@ -5,6 +5,7 @@ import { Alignment } from '../lib/types';
 import { ReactNode } from 'react';
 import { flexAlignCn } from '../lib/utils';
 import { cn } from '@/lib/utils';
+import { env } from '@/lib/env';
 
 type Props = {
     media: Media;
@@ -29,7 +30,7 @@ export function Upload({ media, align }: Props) {
         return;
     }
 
-    const src = process.env.BASE_URL + url;
+    const src = env.BASE_URL + url;
     let element: ReactNode = null;
 
     if (mimeType.startsWith('image')) {

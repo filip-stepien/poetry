@@ -10,6 +10,7 @@ import path from 'path';
 import { slateEditor } from '@payloadcms/richtext-slate';
 import { descriptionElement } from '@/payload/rich-text/descriptionElement';
 import { separatorElement } from '@/payload/rich-text/separatorElement';
+import { env } from '@/lib/env';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const fallbackLanguage = 'en';
 
 export default buildConfig({
-    secret: 'dasd',
+    secret: env.PAYLOAD_SECRET,
     admin: {
         importMap: {
             baseDir: path.resolve(__dirname, 'src')
