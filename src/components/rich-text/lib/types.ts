@@ -1,4 +1,4 @@
-import { Media } from '@/payload/generated-types';
+import { Media } from '@/services/payload/generated-types';
 import { RichTextElement, RichTextCustomElement } from '@payloadcms/richtext-slate';
 
 export type Alignment = 'center' | 'left' | 'right';

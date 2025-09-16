@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Alignment } from '../lib/types';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/client/utils';
 import { flexAlignCn, textAlignCn } from '../lib/utils';
 import { IconQuoteFilled } from '@tabler/icons-react';
 

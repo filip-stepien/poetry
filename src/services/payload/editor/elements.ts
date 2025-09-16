@@ -26,3 +26,9 @@ export const descriptionElement: <T extends string>(
     },
     Element: { path: '/components/slate-editor/GroupDescription' }
 });
+
+export const separatorElement: () => RichTextElement = () => ({
+    name: `group-separator-${uuid()}`,
+    Button: { path: '/components/slate-editor/GroupSeparator' },
+    Element: { path: '/components/slate-editor/GroupSeparator' }
+});

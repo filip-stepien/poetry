@@ -1,11 +1,11 @@
-import { mimeTypes } from '@/payload/collections/Media';
-import { Media } from '@/payload/generated-types';
+import { mimeTypes } from '@/services/payload/collections/Media';
+import { Media } from '@/services/payload/generated-types';
 import Image from 'next/image';
 import { Alignment } from '../lib/types';
 import { ReactNode } from 'react';
 import { flexAlignCn } from '../lib/utils';
-import { cn } from '@/lib/utils';
-import { env } from '@/lib/env';
+import { cn } from '@/lib/client/utils';
+import { env } from '@/lib/server/env';
 
 type Props = {
     media: Media;

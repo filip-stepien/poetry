@@ -4,13 +4,14 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "next dev --turbopack",
+        "dev": "RUNNING_IN_CLI=false next dev --turbopack",
         "build": "next build --turbopack",
         "start": "next start",
         "lint": "eslint",
         "pretty": "prettier --write .",
-        "generate": "npm run payload:importmap && npm run payload:types",
-        "payload:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+        "init": "npm run payload:importmap && npm run payload:types && npm run payload:populate",
+        "payload:populate": "tsx --conditions=react-server --env-file=.env scripts/payload/populate.ts",
+        "payload:importmap": "RUNNING_IN_CLI=true cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
         "payload:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types"
     },
     "dependencies": {
@@ -27,9 +28,11 @@
         "payload": "^3.55.1",
         "react": "19.1.0",
         "react-dom": "19.1.0",
+        "server-cli-only": "^0.3.2",
         "server-only": "^0.0.1",
         "sharp": "^0.34.3",
         "tailwind-merge": "^3.3.1",
+        "tsx": "^4.20.5",
         "uuid": "^13.0.0",
         "zod": "^4.1.8"
     },

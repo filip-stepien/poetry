@@ -1,7 +1,9 @@
+import 'server-cli-only';
 import z from 'zod';
 
 const envSchema = z.object({
     PAYLOAD_SECRET: z.string().min(1),
+    DATABASE_URL: z.string().min(1),
     BASE_URL: z.string().transform(url => (url.endsWith('/') ? url.slice(0, -1) : url)) // ensure the URL does not end with a slash
 });
 

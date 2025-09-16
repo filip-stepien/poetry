@@ -10,10 +10,10 @@ To run the project, follow these steps:
 npm i
 ```
 
-2. Generate required files
+2. Generate required files and populate database with initial data
 
 ```bash
-npm run generate
+npm run init
 ```
 
 3. Start development server

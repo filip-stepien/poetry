@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/client/utils';
 import { Alignment } from './types';
 
 const textAlignClasses: Record<Alignment, string> = {

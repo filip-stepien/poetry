@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Alignment } from '../lib/types';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/client/utils';
 import { textAlignCn } from '../lib/utils';
 
 type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
