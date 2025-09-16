@@ -6,7 +6,7 @@ type Props = {
 
 export function Text({ text, bold, code, italic, strikethrough, underline }: Props) {
     if (text === '') {
-        return <br />;
+        return;
     }
 
     const lines = text.split('\n');
